@@ -1,0 +1,52 @@
+
+
+<ion-content #content [fullscreen]="true">
+  <div class="hero" [style.background-image]="'url(assets/images/rhino5.jpg)'">
+    <!-- <img src="assets/images/rhino3.jpg" alt="rhino" class="hero-image"> -->
+
+    <div class="logo-nav-container">
+      <img src="assets/images/logo.png" alt="Megha Health Care Logo" class="logo-image">
+      <ion-buttons slot="end" class="nav-buttons">
+        <ion-button routerLink="/" href="#">Home</ion-button>
+        <ion-button routerLink="/team" href="#">Team</ion-button>
+        <ion-button style="--color: grey" routerLink="/partners" href="#">Partners</ion-button>
+        <ion-button routerLink="/portfolio" href="#">Portfolio</ion-button>
+        <ion-button routerLink="/contact" href="#">Contact</ion-button>
+      </ion-buttons>
+    </div>
+
+    <div class="hero-text">
+
+      <h1>PARTNERS</h1>
+      <!-- <p>A family office focused on providing capital and operational expertise to support and build meaningful & profitable businesses and real estate development</p> -->
+    </div>
+  </div>
+
+  <div class="arrow-down" [class.hidden]="isArrowHidden">
+    <img src="assets/images/arrow-down-white.png" class="arrow-down-image" (click)="scroll(content)">
+  </div>
+
+  <div class="about">
+    <h2>PARTNER FIRMS</h2>
+    <div style="padding-left: 10%; padding-right: 10%;">
+    <p>Coming Soon</p>
+  </div>
+    <!-- <div class="buttons">
+      <ion-button routerLink="/team">Team</ion-button>
+      <ion-button routerLink="/partners">Partners</ion-button>
+      <ion-button routerLink="/portfolio">Portfolio</ion-button>
+    </div> -->
+  </div>
+
+  <div class="footer">
+    <ion-title>meghaHealthCare Innovations, LLC</ion-title>
+    <div class="footer-content">
+      <p>500 N Marketplace Drive</p>
+      <p>Suite 200</p>
+        <p>Centerville UT, 84014</p>
+      <p>801-809-6187</p>
+    </div>
+  </div>
+</ion-content>
+
+

@@ -1,0 +1,268 @@
+<ion-header *ngIf="!this.stickytoolbar ||  this.commonService.isMobileDevice" class="logo-nav-container-sticky">
+  <ion-toolbar>
+    <ion-title>
+      <img
+        src="assets/images/logo.jpg"
+        alt="Megha Healthcare Logo"
+        style="height: 40px"
+      />
+    </ion-title>
+    <ion-buttons slot="end" class="nav-buttons">
+      <ion-button *ngIf="collapse" (click)="toggleDropdown()">
+        <ion-icon name="reorder-four-outline"></ion-icon>
+      </ion-button>
+
+      <div *ngIf="" class="dropdown-menu" [class.expanded]="showDropdown">
+        <ion-button routerLink="/" href="#">Home</ion-button>
+        <ion-button routerLink="/team" href="#">About Us</ion-button>
+        <ion-button routerLink="/partners" href="#">Therapy</ion-button>
+        <ion-button routerLink="/portfolio" href="#">Careers</ion-button>
+        <ion-button routerLink="/contact" href="#">Contact Us</ion-button>
+      </div>
+
+      <ng-container *ngIf="!collapse">
+        <ion-button style="--color: grey" routerLink="/" href="#"
+          >Home</ion-button
+        >
+        <ion-button routerLink="/team" href="#">About Us</ion-button>
+        <ion-button routerLink="/partners" href="#">Therapy</ion-button>
+        <ion-button routerLink="/portfolio" href="#">Careers</ion-button>
+        <ion-button routerLink="/contact" href="#">Contact Us</ion-button>
+      </ng-container>
+      <div *ngIf="!iconsVisible" class="toolbar-icons">
+        <ion-button>
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #content>
+  <div>
+    <div
+      *ngIf="collapse && showDropdown"
+      class="dropdown-menu"
+      [class.expanded]="showDropdown"
+    >
+      <ion-button routerLink="/" href="#">Home</ion-button>
+      <ion-button routerLink="/team" href="#">About Us</ion-button>
+      <ion-button routerLink="/partners" href="#">Therapy</ion-button>
+      <ion-button routerLink="/portfolio" href="#">Careers</ion-button>
+      <ion-button routerLink="/contact" href="#">Contact Us</ion-button>
+    </div>
+  </div>
+
+  <div *ngIf="this.stickytoolbar && !this.commonService.isMobileDevice" class="logo-nav-container">
+    <img src="assets/images/logo.jpg" class="logo-image" />
+
+    <ion-buttons slot="end" class="nav-buttons">
+      <ion-button *ngIf="collapse" (click)="toggleDropdown()">
+        <ion-icon name="reorder-four-outline"></ion-icon>
+      </ion-button>
+
+      <ng-container *ngIf="!collapse">
+        <ion-button style="--color: grey" routerLink="/" href="#"
+          >Home</ion-button
+        >
+        <ion-button routerLink="/team" href="#">About Us</ion-button>
+        <ion-button routerLink="/partners" href="#">Therapy</ion-button>
+        <ion-button routerLink="/portfolio" href="#">Careers</ion-button>
+        <ion-button routerLink="/contact" href="#">Contact Us</ion-button>
+      </ng-container>
+      <div *ngIf="!iconsVisible" class="toolbar-icons">
+        <ion-button>
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-buttons>
+  </div>
+
+  <div class="container" style="margin-bottom: 200px">
+    <div class="left-section"></div>
+    <div class="right-section">
+      <div class="line">We are</div>
+      <div class="line highlight">Megha Healthcare</div>
+      <div class="paragraph">
+        Your TRUSTED partner in the quest for WELLNESS
+      </div>
+    </div>
+  </div>
+
+  <div class="vision-mission-section">
+    <h2><b>VISION & MISSION</b></h2>
+    <p>Serving The Mankind</p>
+
+    <div class="vision-mission">
+      <div class="vision">
+        <h3><b>Vision</b></h3>
+        <img src="assets/images/1.jpeg" alt="Vision Image" />
+        <p>
+          To introduce innovative pharmaceutical solutions and make a difference
+          in the world of healthcare.
+        </p>
+      </div>
+      <div class="mission">
+        <h3><b>Mission</b></h3>
+        <img src="assets/images/2.jpeg" alt="Mission Image" />
+        <p>
+          To provide best of all therapeutics at affordable prices for a happier
+          and healthier living.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quality-safety-affordability">
+    <div class="feature">
+      <ion-icon name="ribbon-outline"></ion-icon>
+      <h4>Quality</h4>
+      <p>We maintain very high and consistent quality standards.</p>
+    </div>
+    <div class="feature">
+      <ion-icon name="shield-checkmark-outline"></ion-icon>
+      <h4>Safety</h4>
+      <p>We ensure the safety and well-being of our consumers.</p>
+    </div>
+    <div class="feature">
+      <ion-icon name="cash-outline"></ion-icon>
+      <h4>Affordability</h4>
+      <p>We provide quality therapeutics at affordable prices.</p>
+    </div>
+  </div>
+
+  <div class="vision-mission-section">
+    <h2><b>MANUFATURING</b></h2>
+    <p>Technological Advantage & Superior Products</p>
+
+    <div class="vision-mission">
+      <div class="vision">
+        <img src="assets/images/1.jpeg" alt="Vision Image" />
+        <p
+          class="paragraph"
+          style="background-color: rgb(223, 223, 223); padding: 20px"
+        >
+          Megha Healthcare (MHL) has collaborated with manufacturing companies
+          who specialise in manufacturing formulations of various dosage forms
+          and whose facilities are cGMP compliant and approved globally. MHL
+          ensures production of quality medicines and implements technologies to
+          deliver superior products. The plants have the capacity to produce
+          solutions from the start to finish right from raw material processing
+          to packaging. An all inclusive and comprehensive product quality is
+          promised and is tried and tested at different stages. MHL since its
+          inception has been constantly striving to provide technological
+          superiority, high quality products at best competitive prices.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="vision-mission-section">
+    <h2><b>QUALITY FORMULATIONS</b></h2>
+    <p>State-of-the-Art Facilities</p>
+
+    <div class="vision-mission">
+      <div class="vision">
+        <img src="assets/images/1.jpeg" alt="Vision Image" />
+        <p
+          class="paragraph"
+          style="background-color: rgb(223, 223, 223); padding: 20px"
+        >
+          GMP (Good Manufacturing Practice) Standards followed by MHL include
+          WHO norms laid down by the World Health Organisation (WHO) as well as
+          cGMP norms laid down in the Revised Schedule M by the Drug Controller
+          (General) India, Ministry of Health, Government of India. The testing
+          of products is followed as per (WHO) TRS guidelines. Our manufacturing
+          companies' operations are ISO 9001:2000 certified. Our packaging
+          materials confirm to International standards. MHL manufactures over 64
+          formulations in different dosage forms and are regional leaders in the
+          Anti fungal (Dermatology) range with a steadily growing portfolio. We
+          have a strong team of 150 + sales and marketing professionals who
+          cater to more than 30,000 doctors across just one state. Our finished
+          formulations are available at over 50,000 retail pharmacies with over
+          100 distributors in every corner of the state.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="products">
+    <h2><b>Leaders in Anti-Fungal Segment</b></h2>
+    <p>Our Anti-Fungal Product Range</p>
+    <div class="product">
+      <div class="carousel">
+        <div class="slide" *ngFor="let slide of visibleSlides; let i = index">
+          <img [src]="slide" [alt]="'Image ' + (i + 1)" />
+        </div>
+      </div>
+      <button class="nav prev" (click)="prevSlide()">&#9664;</button>
+      <button class="nav next" (click)="nextSlide()">&#9654;</button>
+    </div>
+  </div>
+
+  <ion-footer>
+    <ion-toolbar class="footer-toolbar">
+      <div class="footer-content">
+        <div class="footer-section footer-left-most" style="text-align: left">
+          <img
+            style="max-width: 160px"
+            src="assets/images/logo.jpg"
+            alt="Company Logo"
+            class="footer-logo"
+          />
+          <div class="social-icons">
+            <ion-icon name="logo-linkedin"></ion-icon>
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-twitter"></ion-icon>
+          </div>
+        </div>
+
+        <div class="footer-section footer-left" style="text-align: left">
+          <p>
+            <b>Megha Healthcare Pvt. Ltd.</b><br />
+            9,10 Luthra Premises, Andheri Kurla Road, Safed Pool, Andheri
+            (East), Mumbai - 400 072 INDIA.
+          </p>
+        </div>
+
+        <div class="footer-section footer-center">
+          <p style="text-align: left">
+            Phone: +91 9821325717<br />
+            <a href="mailto:info@meghahealthcare.com">info.com</a><br />
+            <a href="mailto:meghahealthcare@hotmail.com">meghahealthcare.com</a>
+          </p>
+        </div>
+
+        <div class="footer-section footer-right">
+          <div class="footer-links">
+            <a href="#">Home |</a> | <a href="#">Careers |</a> |
+            <a href="#">Contact Us</a><br />
+            <a href="#">Privacy Policy |</a> |
+            <a href="#">Terms & Conditions</a>
+          </div>
+          <ion-button class="login-button" shape="round" fill="solid">
+            <p style="color: white; font-size: 0.8em">Employee Login</p>
+          </ion-button>
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-footer>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="scrollToTop()">
+      <ion-icon name="arrow-up"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

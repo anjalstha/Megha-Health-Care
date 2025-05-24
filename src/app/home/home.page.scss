@@ -1,0 +1,332 @@
+ion-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10; /* Ensure it stays on top of other elements */
+}
+
+ion-content {
+  margin-top: 56px; /* Adjust according to the height of your toolbar */
+}
+
+.logo-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1750px;
+
+  .logo-image {
+    height: 50px;
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+
+    ion-button {
+      --background: transparent;
+      --color: black;
+      margin-right: 15px;
+      font-size: 0.8em;
+
+      &:hover {
+        --color: grey;
+      }
+    }
+  }
+}
+
+ion-content {
+  --background: #fff;
+}
+
+h2 {
+  color: #931b1d;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-section {
+  background: url("/assets/images/3.jpeg") center center no-repeat;
+  background-size: cover;
+}
+
+.left-section,
+.right-section {
+  flex: 1; /* Each section takes up equal width */
+  overflow: hidden; /* Ensures extra width of image is hidden */
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #931b1d;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+.right-section h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.right-section p {
+  font-size: 1.2em;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --border-color: transparent;
+  --background: #ffffff;
+}
+
+.toolbar-button {
+  color: #000000;
+}
+
+.container {
+  height: 650px;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #931b1d;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+.line {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+.line.highlight {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.paragraph {
+  font-size: 1em;
+  margin: 10px;
+}
+
+.vision-mission-section {
+  justify-self: center;
+  text-align: center;
+  padding: 20px;
+  color: #931b1d;
+}
+
+.products {
+  // justify-self: center;
+  text-align: center;
+  padding: 20px;
+  color: #931b1d;
+  margin-bottom: 150px;
+}
+
+.vision-mission-section h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.vision-mission-section p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.vision-mission {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.vision-mission div {
+  flex: 1;
+  text-align: center;
+}
+
+.vision-mission h3 {
+  font-size: 1.5em;
+  color: #931b1d;
+}
+
+.vision-mission img {
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.vision-mission p {
+  font-size: 1em;
+  color: #333;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .vision-mission {
+    flex-direction: row;
+  }
+}
+
+.quality-safety-affordability {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f2f2f2;
+  padding: 30px;
+  text-align: center;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+.feature ion-icon {
+  font-size: 3em;
+  color: #333;
+}
+
+.feature h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.feature p {
+  font-size: 0.9em;
+  color: #666;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .quality-safety-affordability {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .feature {
+    flex: 1;
+    padding: 0 10px;
+  }
+}
+
+.product {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: grid;
+  gap: 10px; /* Space between images */
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Default to 3 columns for large screens */
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 200px; /* Fixed width for the images */
+  height: 150px; /* Fixed height for the images */
+  object-fit: cover; /* Ensures images maintain aspect ratio within the fixed size */
+  border-radius: 8px;
+}
+
+/* Display 1 image per view on small screens */
+@media (max-width: 576px) {
+  .carousel {
+    grid-template-columns: repeat(1, 1fr); /* 1 image per view */
+  }
+  .slide img {
+    width: 100%; /* Smaller fixed size for smaller screens */
+    height: 200px; /* Adjust height accordingly */
+  }
+}
+
+/* Display 2 images per view on medium screens */
+@media (min-width: 577px) and (max-width: 768px) {
+  .carousel {
+    grid-template-columns: repeat(2, 1fr); /* 2 images per view */
+  }
+  .slide img {
+    width: 100%; /* Fixed size for medium screens */
+    height: 200px; /* Adjust height accordingly */
+  }
+}
+
+/* Display 3 images per view on larger screens */
+@media (min-width: 769px) {
+  .carousel {
+    grid-template-columns: repeat(3, 1fr); /* 3 images per view */
+  }
+  .slide img {
+    width: 100%; /* Fixed width for large screens */
+    height: 200px; /* Fixed height for large screens */
+  }
+}
+
+/* Navigation buttons */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.nav.prev {
+  left: 10px;
+}
+
+.nav.next {
+  right: 10px;
+}
+
+.bordered-button {
+  position: relative;
+}
+
+.bordered-button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%; // Adjusts vertical alignment
+  height: 20%; // Adjust height here (50% of the button’s height)
+  width: 2px;
+  background-color: #ffffff; // Border color
+  transform: translateY(-50%);
+}

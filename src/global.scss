@@ -1,0 +1,211 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+ion-toolbar {
+  padding: 30px;
+  padding-top: 30px !important;
+  height: 100px;
+  align-content: center;
+}
+
+toolbar-icon {
+  color: black;
+}
+
+.arrow-down {
+  height: 10px;
+  position: absolute;
+  top: 91%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80px;
+  transition: width 0.3s ease-out, color 0.3s ease-out; /* Transition properties */
+
+  &:hover {
+    width: 90px;
+  }
+}
+
+h2 {
+  color: #000000;
+}
+
+p {
+  color: #000000;
+}
+
+.footer-toolbar {
+  height: 100%;
+  --background: transparent;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #ccc;
+  width: 80%;
+  left: 8%;
+}
+
+.footer-content {
+  text-align-last: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-left-most,
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  text-align: left;
+  min-width: 250px;
+}
+
+.footer-left-most {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 10px;
+}
+
+.footer-links {
+  margin-top: 10px;
+  font-size: 0.9em;
+
+  a {
+    color: #464646;
+    text-decoration: none;
+  }
+}
+
+.login-button {
+  margin-top: 10px;
+  font-size: 0.9em;
+  border-radius: 20px;
+  --background: #931b1d;
+  color: #ffffff !important;
+  --color: #ffffff !important;
+}
+
+.footerLogo {
+  justify-items: center;
+}
+
+.toolbar-icons {
+  --color: black !important;
+  border-left: 1px solid rgb(66, 66, 66);
+  padding-left: 15px;
+  display: flex;
+  height: 15px;
+  align-items: center;
+}
+
+.sc-ion-buttons-md-h {
+  color: black !important;
+}
+
+ion-fab-button {
+  margin-right: 20px;
+  --background: #931b1d;
+}
+
+ion-footer {
+  -webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0),
+    0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0) !important;
+
+  box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0),
+    0 0px 0px 0 rgba(0, 0, 0, 0) !important;
+}
+
+.paragraph {
+  max-width: 90% !important;
+  justify-self: center !important;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Fix the position relative to the viewport */
+  top: 105px; /* Adjust this to the desired distance from the top of the screen */
+  right: 25px; /* Adjust this to position from the right of the screen */
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  max-height: 500px; /* Set a max height if content overflows */
+  z-index: 1000; /* Ensures the dropdown stays above other content */
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  width: 300px;
+
+  /* When expanded, allow the menu to open fully */
+  &.expanded {
+    max-height: 500px;
+  }
+
+  ion-button {
+    width: 100%;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --background: #a76f70;
+    --color: black;
+    margin-right: 15px;
+    font-size: 0.8em;
+  }
+}
+
+.logo-nav-container-sticky {
+  // left: -17px;
+}

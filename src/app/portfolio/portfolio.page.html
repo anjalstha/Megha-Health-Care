@@ -1,0 +1,184 @@
+<ion-header *ngIf="!this.stickytoolbar ||  this.commonService.isMobileDevice" class="logo-nav-container-sticky">
+  <ion-toolbar>
+    <ion-title>
+      <img
+        src="assets/images/logo.jpg"
+        alt="Megha Healthcare Logo"
+        style="height: 40px"
+      />
+    </ion-title>
+    <ion-buttons slot="end" class="nav-buttons">
+      <ion-button *ngIf="collapse" (click)="toggleDropdown()">
+        <ion-icon name="reorder-four-outline"></ion-icon>
+      </ion-button>
+
+      <div *ngIf="" class="dropdown-menu" [class.expanded]="showDropdown">
+        <ion-button routerLink="/" href="#">Home</ion-button>
+        <ion-button routerLink="/team" href="#">About Us</ion-button>
+        <ion-button routerLink="/partners" href="#">Therapy</ion-button>
+        <ion-button routerLink="/portfolio" href="#">Careers</ion-button>
+        <ion-button routerLink="/contact" href="#">Contact Us</ion-button>
+      </div>
+
+      <ng-container *ngIf="!collapse">
+        <ion-button style="--color: grey" routerLink="/" href="#"
+          >Home</ion-button
+        >
+        <ion-button routerLink="/team" href="#">About Us</ion-button>
+        <ion-button routerLink="/partners" href="#">Therapy</ion-button>
+        <ion-button routerLink="/portfolio" href="#">Careers</ion-button>
+        <ion-button routerLink="/contact" href="#">Contact Us</ion-button>
+      </ng-container>
+      <div *ngIf="!iconsVisible" class="toolbar-icons">
+        <ion-button>
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #content>
+  <div>
+    <div
+      *ngIf="collapse && showDropdown"
+      class="dropdown-menu"
+      [class.expanded]="showDropdown"
+    >
+      <ion-button routerLink="/" href="#">Home</ion-button>
+      <ion-button routerLink="/team" href="#">About Us</ion-button>
+      <ion-button routerLink="/partners" href="#">Therapy</ion-button>
+      <ion-button routerLink="/portfolio" href="#">Careers</ion-button>
+      <ion-button routerLink="/contact" href="#">Contact Us</ion-button>
+    </div>
+  </div>
+
+  <div *ngIf="this.stickytoolbar && !this.commonService.isMobileDevice" class="logo-nav-container">
+    <img src="assets/images/logo.jpg" class="logo-image" />
+
+    <ion-buttons slot="end" class="nav-buttons">
+      <ion-button *ngIf="collapse" (click)="toggleDropdown()">
+        <ion-icon name="reorder-four-outline"></ion-icon>
+      </ion-button>
+
+      <ng-container *ngIf="!collapse">
+        <ion-button style="--color: grey" routerLink="/" href="#"
+          >Home</ion-button
+        >
+        <ion-button routerLink="/team" href="#">About Us</ion-button>
+        <ion-button routerLink="/partners" href="#">Therapy</ion-button>
+        <ion-button routerLink="/portfolio" href="#">Careers</ion-button>
+        <ion-button routerLink="/contact" href="#">Contact Us</ion-button>
+      </ng-container>
+      <div *ngIf="!iconsVisible" class="toolbar-icons">
+        <ion-button>
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-buttons>
+  </div>
+
+  <div class="aboutUs">
+    <h2><b>CAREERS</b></h2>
+    <p>Our People</p>
+
+    <div class="vision-mission">
+      <div class="vision">
+        <img src="assets/images/1.jpeg" alt="Vision Image" />
+        <p class="paragraph" style="background-color: rgb(223, 223, 223); padding: 20px">
+          At MHL we believe in investing in our employees. Our people are our most valuable assets. We continually support them in their work so that they attain high level of professional excellence. An environment conducive to growth rewards talent and performance which paves the way to success.
+
+          Our performance driven culture provides numerous growth opportunities to our employees. As a part of our workforce, one will work with inspiring, approachable and visionary leaders. We welcome freshers as well as experienced professionals to come and be a part of the MHL family.
+<br>
+To apply, send email to:
+
+<br>
+
+<ion-button class="login-button" shape="round" fill="solid">
+  <p style="color: white; font-size: 0.8em">Emai1</p>
+  </ion-button>
+
+  <br>
+
+  or,
+
+  <br>
+
+  <ion-button class="login-button" shape="round" fill="solid">
+    <p style="color: white; font-size: 0.8em">Email2</p>
+    </ion-button>
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <ion-footer>
+    <ion-toolbar class="footer-toolbar">
+
+
+      <div class="footer-content">
+
+        <div class="footer-section footer-left-most" style="text-align: left">
+          <img style="max-width: 160px;"
+            src="assets/images/logo.jpg"
+            alt="Company Logo"
+            class="footer-logo"
+          />
+          <div class="social-icons">
+            <ion-icon name="logo-linkedin"></ion-icon>
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-twitter"></ion-icon>
+          </div>
+        </div>
+
+
+        <div class="footer-section footer-left" style="text-align: left">
+          <p>
+            <b>Megha Healthcare Pvt. Ltd.</b><br />
+            9,10 Luthra Premises, Andheri Kurla Road, Safed Pool, Andheri
+            (East), Mumbai - 400 072 INDIA.
+          </p>
+        </div>
+
+        <div class="footer-section footer-center">
+          <p style="text-align: left">
+            Phone: +91 9821325717<br />
+            <a href="mailto:info@meghahealthcare.com">info.com</a><br />
+            <a href="mailto:meghahealthcare@hotmail.com">meghahealthcare.com</a>
+          </p>
+        </div>
+
+        <div class="footer-section footer-right">
+          <div class="footer-links">
+            <a href="#">Home |</a> | <a href="#">Careers |</a> |
+            <a href="#">Contact Us</a><br />
+            <a href="#">Privacy Policy |</a> |
+            <a href="#">Terms & Conditions</a>
+          </div>
+          <ion-button class="login-button" shape="round" fill="solid">
+          <p style="color: white; font-size: 0.8em">Employee Login</p>
+          </ion-button>
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-footer>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="scrollToTop()">
+      <ion-icon name="arrow-up"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
